@@ -23,11 +23,13 @@ const show = async (req,res) => {
 }
 
 const create = async (req, res) => {
+    console.log("hi subcheck 1");
     try {
-        console.log("hi subcheck 1");
+        console.log("hi subcheck 2");
         const fruitData = req.body
         const newFruit = await Fruit.create(fruitData)
         res.status(201).send(newFruit)
+        console.log("hi subcheck 3");
     } catch (err) {
         res.status(409).send('Not able to add Fruit')
     }
