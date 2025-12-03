@@ -24,6 +24,7 @@ const show = async (req,res) => {
 
 const create = async (req, res) => {
     try {
+        console.log("hi subcheck 1");
         const fruitData = req.body
         const newFruit = await Fruit.create(fruitData)
         res.status(201).send(newFruit)

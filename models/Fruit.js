@@ -23,7 +23,7 @@ class Fruit{
         }
     }
 
-    static create = (data) => {
+    static create(data) {
         const newFruit = data
         const updatedFruit = fruits.find((fruit) => fruit.name.toLowerCase() == newFruit.name.toLowerCase())
         if(!updatedFruit) {
